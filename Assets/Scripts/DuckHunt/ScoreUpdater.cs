@@ -13,5 +13,5 @@ public class ScoreUpdater : MonoBehaviour
     void OnEnable() => DuckGameManager.Instance.OnScoreChange.AddListener(UpdateText);
     void OnDisable() => DuckGameManager.Instance.OnScoreChange.RemoveListener(UpdateText);
 
-    private void UpdateText(float score) => textMesh.text = $"Score: {score}";
+    private void UpdateText(float score) => textMesh.text = $"{score}";
 }
