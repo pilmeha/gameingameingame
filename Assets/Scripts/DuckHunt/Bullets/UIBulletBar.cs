@@ -8,21 +8,24 @@ public class UIBulletBar : MonoBehaviour
     [SerializeField] private UIBullet bulletPrefab;
 
     [SerializeField] private List<UIBullet> bullets;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    void OnEnable()
     {
-        Reload();
+        DuckGameManager.Instance.OnShotFired.AddListener(UpdateBullets);
+        DuckGameManager.Instance.OnReload.AddListener(Reload);
     }
 
-    void OnEnable() => DuckGameManager.Instance.OnShotFired.AddListener(UpdateBullets);
+    void OnDisable()
+    {
+        DuckGameManager.Instance.OnShotFired.RemoveListener(UpdateBullets);
+        DuckGameManager.Instance.OnReload.RemoveListener(Reload);
+    }
 
-    void OnDisable() => DuckGameManager.Instance.OnShotFired.RemoveListener(UpdateBullets);
-
-    void Reload()
+    void Reload(int reloads)
     {
         Unload();
         int maxBullets = DuckGameManager.Instance.MaxBulletCount;
-        for (int i = 0; i< maxBullets; i++)
+        for (int i = 0; i < maxBullets; i++)
         {
             UIBullet bullet = Instantiate(bulletPrefab, transform);
             bullets.Add(bullet);
@@ -31,7 +34,7 @@ public class UIBulletBar : MonoBehaviour
 
     void Unload()
     {
-        foreach (UIBullet bullet in transform)
+        foreach (Transform bullet in transform)
             Destroy(bullet.gameObject);
 
         bullets = new();

@@ -8,12 +8,16 @@ public class DuckGameManager : MonoBehaviour
     [SerializeField] private DuckSpawner duckSpawner;
 
     private float score = 0f;
-    private int maxBulletCount = 6;
-    public int MaxBulletCount {get => maxBulletCount;}
+    [SerializeField] private int maxBulletCount = 6;
+    public int MaxBulletCount { get => maxBulletCount; }
+    [SerializeField] private int maxReloads = 1;
+    public int MaxReloads { get => maxReloads; }
     private int bulletCount = 6;
-    public UnityEvent<float> OnScoreChange = new();
-    public UnityEvent<int> OnShotFired = new();
-    
+    private int reloads = 1;
+    [HideInInspector] public UnityEvent<float> OnScoreChange = new();
+    [HideInInspector] public UnityEvent<int> OnShotFired = new();
+    [HideInInspector] public UnityEvent<int> OnReload = new();
+
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,8 +31,9 @@ public class DuckGameManager : MonoBehaviour
 
     void Start()
     {
-        if (bulletCount > maxBulletCount)
-            bulletCount = maxBulletCount;
+        reloads = maxReloads + 1;
+        Debug.Log($"<color=yellow>{name}:</color> Initial reloading...");
+        Reload();
         duckSpawner.StartRound();
     }
 
@@ -40,11 +45,27 @@ public class DuckGameManager : MonoBehaviour
         OnScoreChange.Invoke(score);
     }
 
-    public void Shot()
+    public void Shoot()
     {
         if (bulletCount < 0)
             return;
-        bulletCount--;
+        
+        bulletCount--;        
         OnShotFired.Invoke(bulletCount);
+    }
+
+    public void Reload()
+    {
+        if (reloads <= 0)
+            return;
+        Debug.Log($"<color=yellow>{name}:</color> Reloading...");
+        bulletCount = maxBulletCount;
+        reloads--;        
+        OnReload.Invoke(reloads);
+    }
+
+    public void AmmoDepleted()
+    {
+        Debug.Log($"<color=yellow>{name}:</color> Ammo depleted... Stopping");
     }
 }
