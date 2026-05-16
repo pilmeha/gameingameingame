@@ -10,6 +10,7 @@ public class ScopeCursor : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private AudioSource shootSFX;
+    private bool canShoot = true;
 
     void Awake()
     {
@@ -18,11 +19,14 @@ public class ScopeCursor : MonoBehaviour
         Cursor.visible = false;
     }
 
+    void OnEnable() => DuckGameManager.Instance.OnShotFired.AddListener(CheckBullets);
+    void OnDisable() => DuckGameManager.Instance.OnShotFired.RemoveListener(CheckBullets);
+
     void Update()
     {
         Move();
         
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (canShoot && Mouse.current.leftButton.wasPressedThisFrame)
             Click();
     }
 
@@ -35,5 +39,12 @@ public class ScopeCursor : MonoBehaviour
     {
         animator.SetTrigger(ShootHash);
         shootSFX.Play();
+        
+        DuckGameManager.Instance.Shot();
+    }
+
+    void CheckBullets(int current)
+    {
+        canShoot = current > 0;
     }
 }

@@ -69,6 +69,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (Status == DuckStatus.Damaged)  
+            return;
+
         Debug.Log($"Duck hit!");
         Hit();
     }

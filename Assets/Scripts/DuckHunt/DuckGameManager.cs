@@ -8,7 +8,11 @@ public class DuckGameManager : MonoBehaviour
     [SerializeField] private DuckSpawner duckSpawner;
 
     private float score = 0f;
+    private int maxBulletCount = 6;
+    public int MaxBulletCount {get => maxBulletCount;}
+    private int bulletCount = 6;
     public UnityEvent<float> OnScoreChange = new();
+    public UnityEvent<int> OnShotFired = new();
     
     void Awake()
     {
@@ -23,6 +27,8 @@ public class DuckGameManager : MonoBehaviour
 
     void Start()
     {
+        if (bulletCount > maxBulletCount)
+            bulletCount = maxBulletCount;
         duckSpawner.StartRound();
     }
 
@@ -32,5 +38,13 @@ public class DuckGameManager : MonoBehaviour
             return;
         score += deltaScore;
         OnScoreChange.Invoke(score);
+    }
+
+    public void Shot()
+    {
+        if (bulletCount < 0)
+            return;
+        bulletCount--;
+        OnShotFired.Invoke(bulletCount);
     }
 }
