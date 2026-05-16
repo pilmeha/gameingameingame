@@ -8,19 +8,21 @@ public class Duck : MonoBehaviour, IPointerClickHandler
 {
     private static readonly int DamagedHash = Animator.StringToHash("Damaged");
 
-    public DuckStatus Status { get; private set; }
-
+    [Header("Parameters")]
+    [SerializeField] [EnumButtons] private DuckDiffuculty difficulty = DuckDiffuculty.Low;
     [SerializeField] private float flightSpeed = 10f;
-    [SerializeField] private DuckDiffuculty difficulty = DuckDiffuculty.Low;
     [SerializeField] private float difficultyCompensation = 1.5f;
 
-    public float FlightTime => flightSpeed / (float)difficulty * difficultyCompensation;
-
-    [SerializeField] private SplineContainer spline;
-
+    [Header("Sound")]
+    [SerializeField] private AudioSource hurtSFX;
+    [SerializeField] private AudioSource fallSFX;
+    private SplineContainer spline;
     private Coroutine flightCoroutine;
-
     private Animator animator;
+
+    public DuckStatus Status { get; private set; }
+
+    public float FlightTime => flightSpeed / (float)difficulty * difficultyCompensation;
 
     void Awake()
     {
@@ -47,11 +49,11 @@ public class Duck : MonoBehaviour, IPointerClickHandler
         {
             timer += Time.deltaTime;
             // Debug.Log($"Waiting for {FlightTime} seconds - {FlightTime - timer} to go");
-            
+
             float t = timer / FlightTime;
             Vector3 splinePoint = spline.EvaluatePosition(t);
             Vector3 worldPoint = spline.transform.TransformPoint(splinePoint);
-            
+
             transform.position = worldPoint;
 
             yield return null;
@@ -67,6 +69,7 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log($"Duck hit!");
         Status = DuckStatus.Damaged;
+        hurtSFX.Play();
         if (flightCoroutine != null)
             StopCoroutine(flightCoroutine);
         animator.enabled = true;

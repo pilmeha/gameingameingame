@@ -9,8 +9,8 @@ public class DuckSpawner : MonoBehaviour
     [SerializeField] private Transform duckContainerTransform;
     [SerializeField] private SplineContainer path;
 
-    [SerializeField] private int maxDucks = 8;
-    private float defaultSpawnDelay = 5f;
+    [SerializeField] private int maxDucks = 10;
+    private float defaultSpawnDelay = 3f;
 
     private DuckDiffuculty difficulty = DuckDiffuculty.Low;
 
