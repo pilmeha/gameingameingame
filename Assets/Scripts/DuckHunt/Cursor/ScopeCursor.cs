@@ -1,40 +1,37 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(RectTransform))]
-public class ScopeCursor : MonoBehaviour, IPointerClickHandler
+public class ScopeCursor : MonoBehaviour
 {
     private static readonly int ShootHash = Animator.StringToHash("Shoot");
     private RectTransform rectTransform;
-    private ScopeCanvas scopeCanvas;
     private Animator animator;
 
     [SerializeField] private AudioSource shootSFX;
 
     void Awake()
     {
-        scopeCanvas = GetComponentInParent<ScopeCanvas>();
         rectTransform = GetComponent<RectTransform>();
         animator = GetComponent<Animator>();
         Cursor.visible = false;
     }
 
-    void OnEnable()
+    void Update()
     {
-        scopeCanvas.OnCursorMove.AddListener(Move);
+        Move();
+        
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            Click();
     }
 
-    void OnDisable()
+    void Move()
     {
-        scopeCanvas.OnCursorMove.RemoveListener(Move);
+        rectTransform.position = Mouse.current.position.ReadValue();
     }
 
-    void Move(PointerEventData eventData)
-    {
-        rectTransform.position = eventData.position;
-    }
-
-    public void OnPointerClick(PointerEventData eventData)
+    void Click()
     {
         animator.SetTrigger(ShootHash);
         shootSFX.Play();
