@@ -59,10 +59,4 @@ public class Duck : MonoBehaviour
     {
         spline = path;
     }
-
-    public enum DuckStatus
-    {
-        Alive,
-        Damaged
-    }
 }
