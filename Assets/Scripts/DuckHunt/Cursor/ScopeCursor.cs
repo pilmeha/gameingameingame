@@ -11,6 +11,7 @@ public class ScopeCursor : MonoBehaviour
     {
         scopeCanvas = GetComponentInParent<ScopeCanvas>();
         rectTransform = GetComponent<RectTransform>();
+        Cursor.visible = false;
     }
 
     void OnEnable()
