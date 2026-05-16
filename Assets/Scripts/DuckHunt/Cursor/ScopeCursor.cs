@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
-public class ScopeCursor : MonoBehaviour
+public class ScopeCursor : MonoBehaviour, IPointerClickHandler
 {
     private RectTransform rectTransform;
     private ScopeCanvas scopeCanvas;
+
+    [SerializeField] private AudioSource shootSFX;
 
     void Awake()
     {
@@ -27,5 +29,10 @@ public class ScopeCursor : MonoBehaviour
     void Move(PointerEventData eventData)
     {
         rectTransform.position = eventData.position;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        shootSFX.Play();
     }
 }
