@@ -4,8 +4,10 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(RectTransform))]
 public class ScopeCursor : MonoBehaviour, IPointerClickHandler
 {
+    private static readonly int ShootHash = Animator.StringToHash("Shoot");
     private RectTransform rectTransform;
     private ScopeCanvas scopeCanvas;
+    private Animator animator;
 
     [SerializeField] private AudioSource shootSFX;
 
@@ -13,6 +15,7 @@ public class ScopeCursor : MonoBehaviour, IPointerClickHandler
     {
         scopeCanvas = GetComponentInParent<ScopeCanvas>();
         rectTransform = GetComponent<RectTransform>();
+        animator = GetComponent<Animator>();
         Cursor.visible = false;
     }
 
@@ -33,6 +36,7 @@ public class ScopeCursor : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        animator.SetTrigger(ShootHash);
         shootSFX.Play();
     }
 }
