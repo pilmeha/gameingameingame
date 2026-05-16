@@ -415,8 +415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Duck
   difficulty: 1
+  defaultScore: 100
   flightSpeed: 10
-  difficultyCompensation: 1.5
+  difficultyCompensation: 1.2
   hurtSFX: {fileID: 6084585524989319285}
   fallSFX: {fileID: 0}
 --- !u!95 &6079296483134814716

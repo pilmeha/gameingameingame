@@ -10,8 +10,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler
 
     [Header("Parameters")]
     [SerializeField] [EnumButtons] private DuckDiffuculty difficulty = DuckDiffuculty.Low;
+    [SerializeField] private float defaultScore = 100f;
     [SerializeField] private float flightSpeed = 10f;
-    [SerializeField] private float difficultyCompensation = 1.5f;
+    [SerializeField] private float difficultyCompensation = 1.2f;
 
     [Header("Sound")]
     [SerializeField] private AudioSource hurtSFX;
@@ -23,6 +24,7 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     public DuckStatus Status { get; private set; }
 
     public float FlightTime => flightSpeed / (float)difficulty * difficultyCompensation;
+    public float Score => defaultScore *(float)difficulty;
 
     void Awake()
     {
@@ -68,12 +70,21 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log($"Duck hit!");
+        Hit();
+    }
+
+    private void Hit()
+    {
         Status = DuckStatus.Damaged;
-        hurtSFX.Play();
+        
         if (flightCoroutine != null)
             StopCoroutine(flightCoroutine);
+
         animator.enabled = true;
         animator.Play(DamagedHash);
+
+        hurtSFX.Play();
+        DuckGameManager.Instance.AddScore(Score);
     }
 
     public void SetDifficulty(DuckDiffuculty difficulty)
