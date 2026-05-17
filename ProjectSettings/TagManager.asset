@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Duck
+  - Pellet
+  - PowerPellet
+  - Ghost
   layers:
   - Default
   - TransparentFX
@@ -12,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Ghost
   - 
   - 
   - 
@@ -41,6 +44,21 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2554283797
+    locked: 0
+  - name: Walls
+    uniqueID: 3790721047
+    locked: 0
+  - name: Pellets
+    uniqueID: 384782161
+    locked: 0
+  - name: Characters
+    uniqueID: 3067111227
+    locked: 0
+  - name: UI
+    uniqueID: 3816515987
     locked: 0
   m_RenderingLayers:
   - Default
