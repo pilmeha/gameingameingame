@@ -5,6 +5,7 @@ public class Dog : MonoBehaviour, IPointerClickHandler
 {
     private static readonly int DamagedHash = Animator.StringToHash("Damaged");
     [SerializeField] private Transform leftBorder;
+    [SerializeField] private Transform centerTransform;
     [SerializeField] private Transform rightBorder;
 
     [SerializeField] private float speed = 5f;
@@ -16,6 +17,7 @@ public class Dog : MonoBehaviour, IPointerClickHandler
     private Transform currentTarget;
     private Animator animator;
     [SerializeField] private AudioSource hurtSFX;
+    [SerializeField] private AudioSource laughSFX;
     private bool canWalk = true;
 
     public DuckStatus Status { get; private set; }
@@ -25,6 +27,10 @@ public class Dog : MonoBehaviour, IPointerClickHandler
         animator = GetComponent<Animator>();
         ChangeDirection(Direction.Right);
     }
+
+    void OnEnable() => DuckGameManager.Instance.OnAmmoDepleted.AddListener(Stop);
+    void OnDisable() => DuckGameManager.Instance.OnAmmoDepleted.RemoveListener(Stop);
+
     void Update()
     {
         Move();
@@ -33,21 +39,23 @@ public class Dog : MonoBehaviour, IPointerClickHandler
 
     private void Move()
     {
+        float sineOffset = Mathf.Sin(Time.time * waveFrequency) * waveAmplitude;
+        transform.position += new Vector3(0f, sineOffset, 0f);
+        if (!canWalk)
+            return;
+
         if (Vector3.Distance(currentTarget.position, transform.position) < 0.1f)
         {
             Direction dir = Direction.Left;
             if (direction == dir)
                 dir = Direction.Right;
+            if (currentTarget == centerTransform){
+                canWalk = false;
+                return;
+            }
             ChangeDirection(dir);
         }
-        if (canWalk)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
-
-            float sineOffset = Mathf.Sin(Time.time * waveFrequency) * waveAmplitude;
-
-            transform.position += new Vector3(0f, sineOffset, 0f);
-        }
+        transform.position = Vector3.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
     }
 
     void ChangeDirection(Direction dir)
@@ -65,6 +73,12 @@ public class Dog : MonoBehaviour, IPointerClickHandler
                 currentTarget = rightBorder;
                 break;
         }
+    }
+
+    void Stop()
+    {
+        currentTarget = centerTransform;
+        laughSFX.Play();
     }
 
     public void OnPointerClick(PointerEventData eventData)
