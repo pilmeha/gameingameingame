@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Splines;
 
 public class DuckSpawner : MonoBehaviour
@@ -11,6 +12,7 @@ public class DuckSpawner : MonoBehaviour
     [SerializeField] private SplineContainer path;
 
     [SerializeField] private int maxDucks = 10;
+    private int activeDucks = 0;
     public int MaxDucks { get => maxDucks; }
     private float defaultSpawnDelay = 3f;
 
@@ -19,6 +21,8 @@ public class DuckSpawner : MonoBehaviour
     private Coroutine spawnCoroutine;
 
     private WaitForSeconds spawnDelayCoroutine;
+
+    public UnityEvent OnRoundEnd = new();
     [Header("Debug")]
 
     [SerializeField] private List<Duck> ducks;
@@ -43,6 +47,7 @@ public class DuckSpawner : MonoBehaviour
     {
         if (spawnCoroutine != null)
             StopCoroutine(spawnCoroutine);
+        OnRoundEnd.Invoke();
     }
 
     public void StartRound()
@@ -60,21 +65,29 @@ public class DuckSpawner : MonoBehaviour
         Duck duck = Instantiate(duckPrefab, duckContainerTransform);
         duck.SetPath(path);
         duck.SetDifficulty(difficulty);
+        duck.OnDeactivate.AddListener(() => activeDucks--);
         ducks.Add(duck);
         return duck;
     }
 
     private IEnumerator SpawnDucks()
     {
-        float spawnDelay = 0f;
+        float spawnDelay;
         float spawnDelayDelta = defaultSpawnDelay * 0.5f;
         for (int i = 0; i < maxDucks; i++)
         {
             Duck duck = SpawnDuck(difficulty);
+            duck.SetIndex(i);
             duck.Activate();
+            activeDucks++;
             spawnDelay = UnityEngine.Random.Range(-spawnDelayDelta, spawnDelayDelta) + defaultSpawnDelay;
             spawnDelayCoroutine = new(spawnDelay);
             yield return spawnDelayCoroutine;
         }
+        while (activeDucks > 0)
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        OnRoundEnd.Invoke();
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Splines;
 
@@ -24,13 +25,21 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     private Animator animator;
 
     public DuckStatus Status { get; private set; }
+    public int index = 0;
 
     public float FlightTime => flightSpeed / (float)difficulty * difficultyCompensation;
     public float Score => defaultScore *(float)difficulty;
 
+    public UnityEvent<int> OnSurvived = new();
+    public UnityEvent OnDeactivate = new();
+
     void Awake()
     {
         animator = GetComponent<Animator>();
+    }
+    public void SetIndex(int index)
+    {
+        this.index = index;
     }
 
     public void Activate()
@@ -42,7 +51,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler
 
     public void Deactivate()
     {
+        OnSurvived.RemoveAllListeners();
         gameObject.SetActive(false);
+        OnDeactivate.Invoke();
     }
 
     private IEnumerator Fly()
@@ -52,7 +63,6 @@ public class Duck : MonoBehaviour, IPointerClickHandler
         while (timer < FlightTime)
         {
             timer += Time.deltaTime;
-            // Debug.Log($"Waiting for {FlightTime} seconds - {FlightTime - timer} to go");
 
             float t = timer / FlightTime;
             Vector3 splinePoint = spline.EvaluatePosition(t);
@@ -62,9 +72,9 @@ public class Duck : MonoBehaviour, IPointerClickHandler
             animator.SetFloat(yPosHash, direction.y);
             transform.position = worldPoint;
 
-
             yield return null;
         }
+        OnSurvived.Invoke(index);
         Deactivate();
     }
 
