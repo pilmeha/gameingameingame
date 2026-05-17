@@ -9,6 +9,7 @@ public class PelletSpawner : MonoBehaviour
     public GameObject powerPelletPrefab; // 超级豆预制体（需挂载 Pellet 脚本）
     public Transform pelletsContainer;   // 可选：存放豆子的父物体
 
+
     public BoundsInt mazeBounds;
 
     private void Start()
