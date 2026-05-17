@@ -20,6 +20,8 @@ public class PlayerAttack : MonoBehaviour
     {
         isAttacking = true;
 
+        SoundManager.Instance.PlaySwordSwing();
+
         swordHitbox.SetActive(true);
 
         yield return new WaitForSeconds(attackDuration);

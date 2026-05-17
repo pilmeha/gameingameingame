@@ -12,13 +12,15 @@ public class MiniZeldaManager : MonoBehaviour
 
     public void WinGame()
     {
-        Debug.Log("Boss defeated");
+        MusicManager.Instance.PlayHubMusic();
 
         SceneManager.LoadScene(GameManager.Instance.hubSceneName);
     }
 
     public void LoseGame()
     {
+        MusicManager.Instance.PlayHubMusic();
+
         SceneManager.LoadScene(GameManager.Instance.hubSceneName);
     }
 

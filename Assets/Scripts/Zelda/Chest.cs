@@ -22,6 +22,8 @@ public class Chest : MonoBehaviour
 
                 swordObject.SetActive(true);
 
+                SoundManager.Instance.PlaySwordPickup();
+
                 Debug.Log("Sword obtained");
             }
         }

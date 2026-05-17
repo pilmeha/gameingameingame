@@ -7,6 +7,11 @@ public class StationInteract : MonoBehaviour
 
     public void Interact()
     {
+
+        MusicManager.Instance.PauseHubMusic();
+
+        MusicManager.Instance.PlayZeldaMusic();
+
         SceneManager.LoadScene(sceneToLoad);
     }
 }

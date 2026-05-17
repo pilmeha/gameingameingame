@@ -43,16 +43,19 @@ public class GameManager : MonoBehaviour
 
     public void GiveDuckKey()
     {
+        SoundManager.Instance.PlayKeyPickup();
         duckKey = true;
     }
 
     public void GiveZeldaKey()
     {
+        SoundManager.Instance.PlayKeyPickup();
         zeldaKey = true;
     }
 
     public void GivePacmanKey()
     {
+        SoundManager.Instance.PlayKeyPickup();
         pacmanKey = true;
     }
 }
