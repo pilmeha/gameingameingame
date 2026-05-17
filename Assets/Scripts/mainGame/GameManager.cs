@@ -38,7 +38,8 @@ public class GameManager : MonoBehaviour
 
     public bool AllKeysCollected()
     {
-        return duckKey && zeldaKey && pacmanKey;
+        //return duckKey && zeldaKey && pacmanKey;
+        return duckKey && zeldaKey;
     }
 
     public void GiveDuckKey()

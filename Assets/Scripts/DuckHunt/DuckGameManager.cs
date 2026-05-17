@@ -72,9 +72,18 @@ public class DuckGameManager : MonoBehaviour
         Results = GetResults();
         GameActive = false;
         Debug.Log($"Game finished: {JsonUtility.ToJson(Results)}");
+
+        if (Results.DogShot)
+        {
+            GameManager.Instance.GiveDuckKey();
+            GameManager.Instance.GivePacmanKey();
+        }
+
         if (Results.DuckMissed == 0)
+        { 
             winSFX.Play();
-        else 
+        }
+        else
             loseSFX.Play();
     }
 
