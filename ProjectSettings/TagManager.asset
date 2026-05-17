@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Duck
+  - Pellet
+  - PowerPellet
+  - Ghost
   layers:
   - Default
   - TransparentFX
@@ -12,9 +15,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Ghost
   - 
   - 
   - Duck
