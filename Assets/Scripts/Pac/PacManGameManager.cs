@@ -9,9 +9,8 @@ public class PacManGameManager : MonoBehaviour
     public Text ScoreText;
     public GameObject floatingTextPrefab;
 
-    // 鬼的预制体数组和出生点数组（在Inspector中赋值）
-    public GameObject[] ghostPrefabs;        // 4个不同的鬼预制体
-    public Transform[] ghostSpawnPoints;     // 4个对应的出生点
+    public GameObject[] ghostPrefabs;
+    public Transform[] ghostSpawnPoints;
 
     private int score = 0;
     private int ghostEatCount = 0;

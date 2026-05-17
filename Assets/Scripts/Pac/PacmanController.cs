@@ -3,9 +3,9 @@ using UnityEngine;
 public class PacmanGridMover : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public Sprite openMouthSprite;      // 张嘴图片（嘴朝左）
-    public Sprite closedMouthSprite;    // 闭嘴图片（嘴朝左）
-    public float animationInterval = 0.2f; // 动画切换间隔（秒）
+    public Sprite openMouthSprite;
+    public Sprite closedMouthSprite;
+    public float animationInterval = 0.2f;
 
     private Vector2 targetPos;
     private Vector2 currentDir = Vector2.left;
@@ -15,7 +15,7 @@ public class PacmanGridMover : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private float animationTimer = 0f;
-    private bool isOpenMouth = true;    // 当前是否显示张嘴图片
+    private bool isOpenMouth = true;
 
     void Start()
     {
@@ -37,13 +37,11 @@ public class PacmanGridMover : MonoBehaviour
 
     void Update()
     {
-        // 1. 方向输入
         if (Input.GetKeyDown(KeyCode.UpArrow)) nextDir = Vector2.up;
         else if (Input.GetKeyDown(KeyCode.DownArrow)) nextDir = Vector2.down;
         else if (Input.GetKeyDown(KeyCode.LeftArrow)) nextDir = Vector2.left;
         else if (Input.GetKeyDown(KeyCode.RightArrow)) nextDir = Vector2.right;
 
-        // 2. 网格移动逻辑
         if (Vector2.Distance(transform.position, targetPos) < 0.05f)
         {
             transform.position = targetPos;
@@ -72,7 +70,6 @@ public class PacmanGridMover : MonoBehaviour
             UpdateSpriteAndRotation();
         }
 
-        // 3. 动画：周期性切换张嘴/闭嘴
         animationTimer += Time.deltaTime;
         if (animationTimer >= animationInterval)
         {
@@ -96,17 +93,14 @@ public class PacmanGridMover : MonoBehaviour
         return hit == null;
     }
 
-    // 更新精灵图片以及根据移动方向旋转
     void UpdateSpriteAndRotation()
     {
         if (spriteRenderer == null) return;
 
-        // 选择当前要显示的精灵（张嘴或闭嘴）
         Sprite targetSprite = isOpenMouth ? openMouthSprite : closedMouthSprite;
         if (targetSprite != null)
             spriteRenderer.sprite = targetSprite;
 
-        // 根据移动方向旋转吃豆人（假设默认图片嘴朝左）
         if (currentDir != Vector2.zero)
         {
             float angle = 0f;
@@ -130,6 +124,5 @@ public class PacmanGridMover : MonoBehaviour
             Destroy(other.gameObject);
             FindObjectOfType<PacManGameManager>().PowerUp();
         }
-        // 幽灵碰撞由幽灵自身的脚本处理，这里不再需要
     }
 }

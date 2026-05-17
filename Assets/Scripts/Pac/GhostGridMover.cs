@@ -11,12 +11,11 @@ public class GhostGridMover : MonoBehaviour
     private Vector2 currentDir;
     private Vector2 intendedDir;
     private Transform player;
-    private Vector2 startPos;          // 记录自己的出生点
+    private Vector2 startPos;
     private bool isMoving = false;
     private SpriteRenderer spriteRenderer;
     private Sprite originalSprite;
 
-    // 用于标记这是第几个鬼（由管理器赋值）
     [HideInInspector] public int ghostIndex = -1;
 
     void Start()
@@ -88,12 +87,10 @@ public class GhostGridMover : MonoBehaviour
         {
             if (isVulnerable)
             {
-                // 1. 通知管理器：我要被吃掉了，请在起点重生我
                 PacManGameManager gm = FindObjectOfType<PacManGameManager>();
                 if (gm != null)
                     gm.RequeueGhostRespawn(ghostIndex, startPos);
 
-                // 2. 销毁自己
                 Destroy(gameObject);
             }
             else
@@ -105,7 +102,6 @@ public class GhostGridMover : MonoBehaviour
         }
     }
 
-    // ---------- 方向辅助方法 ----------
     bool IsValidDirection(Vector2 dir)
     {
         if (dir == Vector2.zero) return false;
@@ -196,7 +192,6 @@ public class GhostGridMover : MonoBehaviour
         }
     }
 
-    // 提供给管理器用于重生后的初始化
     public void InitializeGhost(Vector2 spawnPos, int index)
     {
         transform.position = spawnPos;
@@ -205,7 +200,7 @@ public class GhostGridMover : MonoBehaviour
         AlignToGrid();
         targetPos = transform.position;
         isMoving = false;
-        MakeNormal();               // 恢复普通状态
+        MakeNormal();
         currentDir = FindAnyValidDirection();
         intendedDir = currentDir;
         if (currentDir != Vector2.zero)
