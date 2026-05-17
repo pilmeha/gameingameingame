@@ -5,7 +5,7 @@ public class DoorController : MonoBehaviour
 {
     [SerializeField] private string endingSceneName;
 
-    public void TryOpenDoor()
+    public void Interact()
     {
         if (GameManager.Instance.AllKeysCollected())
         {
@@ -13,7 +13,7 @@ public class DoorController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not enough keys");
+            Debug.Log("Need all key parts");
         }
     }
 }
