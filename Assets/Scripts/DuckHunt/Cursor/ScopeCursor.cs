@@ -39,6 +39,7 @@ public class ScopeCursor : MonoBehaviour
     {
         Move();
 
+        if (!DuckGameManager.Instance.GameActive) return;
         if (!Mouse.current.leftButton.wasPressedThisFrame) return;
 
         if (canShoot)
