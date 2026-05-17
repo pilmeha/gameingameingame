@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Voidman.unity
     guid: 547d6c6d2d2f85842833ccfada05516e
+  - enabled: 1
+    path: Assets/Scenes/FinishScene.unity
+    guid: d52b730b980536443902a1352ac33caf
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
