@@ -10,6 +10,8 @@ public class MusicManager : MonoBehaviour
     [Header("Mini Games")]
     [SerializeField] private AudioClip zeldaMusic;
 
+    //[SerializeField] private AudioClip duckMusic;
+
     private AudioSource audioSource;
 
     private float hubMusicTime;
@@ -56,4 +58,14 @@ public class MusicManager : MonoBehaviour
 
         audioSource.Play();
     }
+
+    public void PlayDuckMusic()
+    {
+        //audioSource.clip = duckMusic;
+
+        audioSource.time = 0f;
+
+        audioSource.Play();
+    }
+
 }

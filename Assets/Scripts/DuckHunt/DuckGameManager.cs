@@ -69,22 +69,48 @@ public class DuckGameManager : MonoBehaviour
 
     void GameFinish()
     {
+
         Results = GetResults();
+
         GameActive = false;
+
         Debug.Log($"Game finished: {JsonUtility.ToJson(Results)}");
 
+        // Hidden condition
         if (Results.DogShot)
         {
             GameManager.Instance.GiveDuckKey();
-            GameManager.Instance.GivePacmanKey();
         }
 
+        // Победа
         if (Results.DuckMissed == 0)
-        { 
+        {
             winSFX.Play();
+
+            DuckMiniGameManager.Instance.WinGame();
         }
         else
+        {
             loseSFX.Play();
+
+            DuckMiniGameManager.Instance.LoseGame();
+        }
+
+        //Results = GetResults();
+        //GameActive = false;
+        //Debug.Log($"Game finished: {JsonUtility.ToJson(Results)}");
+
+        //if (Results.DogShot)
+        //{
+        //    GameManager.Instance.GiveDuckKey();
+        //}
+
+        //if (Results.DuckMissed == 0)
+        //{ 
+        //    winSFX.Play();
+        //}
+        //else
+        //    loseSFX.Play();
     }
 
     public void Shoot()

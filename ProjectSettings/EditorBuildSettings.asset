@@ -18,11 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Legendexe.unity
     guid: fb13f453a0e853c4eb0faa42325a738f
   - enabled: 1
-    path: Assets/Scenes/Voidman.unity
-    guid: 547d6c6d2d2f85842833ccfada05516e
-  - enabled: 1
-    path: Assets/Scenes/FinishScene.unity
-    guid: d52b730b980536443902a1352ac33caf
+    path: Assets/Scenes/PacManArcade.unity
+    guid: 1c27d975bf7314c0ea791a33a2b71a64
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5c72e79387ba2734cbc171017c061bf5
