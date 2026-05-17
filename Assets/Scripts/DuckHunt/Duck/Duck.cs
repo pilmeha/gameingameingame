@@ -7,6 +7,8 @@ using UnityEngine.Splines;
 public class Duck : MonoBehaviour, IPointerClickHandler
 {
     private static readonly int DamagedHash = Animator.StringToHash("Damaged");
+    private static readonly int xPosHash = Animator.StringToHash("xPosition");
+    private static readonly int yPosHash = Animator.StringToHash("yPosition");
 
     [Header("Parameters")]
     [SerializeField] [EnumButtons] private DuckDiffuculty difficulty = DuckDiffuculty.Low;
@@ -55,8 +57,11 @@ public class Duck : MonoBehaviour, IPointerClickHandler
             float t = timer / FlightTime;
             Vector3 splinePoint = spline.EvaluatePosition(t);
             Vector3 worldPoint = spline.transform.TransformPoint(splinePoint);
-
+            Vector3 direction = (worldPoint-transform.position).normalized;
+            animator.SetFloat(xPosHash, direction.x);
+            animator.SetFloat(yPosHash, direction.y);
             transform.position = worldPoint;
+
 
             yield return null;
         }
