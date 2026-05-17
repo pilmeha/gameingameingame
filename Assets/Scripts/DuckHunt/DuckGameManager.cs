@@ -12,11 +12,16 @@ public class DuckGameManager : MonoBehaviour
     public int MaxBulletCount { get => maxBulletCount; }
     [SerializeField] private int maxReloads = 1;
     public int MaxReloads { get => maxReloads; }
+
+    private bool hasAmmo = true;
+    public bool HasAmmo { get => hasAmmo; }
     private int bulletCount = 6;
     private int reloads = 1;
     [HideInInspector] public UnityEvent<float> OnScoreChange = new();
     [HideInInspector] public UnityEvent<int> OnShotFired = new();
     [HideInInspector] public UnityEvent<int> OnReload = new();
+    [HideInInspector] public UnityEvent OnAmmoDepleted = new();
+
 
     void Awake()
     {
@@ -47,8 +52,10 @@ public class DuckGameManager : MonoBehaviour
 
     public void Shoot()
     {
-        if (bulletCount < 0)
+        if (bulletCount < 0){
+            hasAmmo = false;
             return;
+        }
         
         bulletCount--;        
         OnShotFired.Invoke(bulletCount);
@@ -60,6 +67,7 @@ public class DuckGameManager : MonoBehaviour
             return;
         Debug.Log($"<color=yellow>{name}:</color> Reloading...");
         bulletCount = maxBulletCount;
+        hasAmmo = true;
         reloads--;        
         OnReload.Invoke(reloads);
     }
@@ -67,5 +75,7 @@ public class DuckGameManager : MonoBehaviour
     public void AmmoDepleted()
     {
         Debug.Log($"<color=yellow>{name}:</color> Ammo depleted... Stopping");
+        hasAmmo = false;
+        OnAmmoDepleted.Invoke();
     }
 }

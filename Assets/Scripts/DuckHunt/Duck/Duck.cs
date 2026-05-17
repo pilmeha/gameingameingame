@@ -69,7 +69,7 @@ public class Duck : MonoBehaviour, IPointerClickHandler
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (Status == DuckStatus.Damaged)  
+        if (Status == DuckStatus.Damaged || !DuckGameManager.Instance.HasAmmo)
             return;
 
         Debug.Log($"Duck hit!");
