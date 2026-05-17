@@ -42,6 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Character
+    uniqueID: 1659059539
+    locked: 0
+  - name: Sword
+    uniqueID: 41481839
+    locked: 0
+  - name: Chest
+    uniqueID: 2811500153
+    locked: 0
+  - name: Background
+    uniqueID: 3822638001
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

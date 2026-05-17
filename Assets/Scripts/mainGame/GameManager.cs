@@ -40,4 +40,19 @@ public class GameManager : MonoBehaviour
     {
         return duckKey && zeldaKey && pacmanKey;
     }
+
+    public void GiveDuckKey()
+    {
+        duckKey = true;
+    }
+
+    public void GiveZeldaKey()
+    {
+        zeldaKey = true;
+    }
+
+    public void GivePacmanKey()
+    {
+        pacmanKey = true;
+    }
 }

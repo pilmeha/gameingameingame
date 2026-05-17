@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zeld2 (2)_0
+      name: zeld2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -125,14 +125,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af0712e4d15ec1b4bb50a675a51e5259
-      internalID: -55380062
+      spriteID: eab40b0f794bf984baf6c0cd8193979f
+      internalID: 1778367542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_1
+      name: zeld2_1
       rect:
         serializedVersion: 2
         x: 160
@@ -147,14 +147,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f52975fedb88c2144a0a337b2320a849
-      internalID: -1975686088
+      spriteID: eb545f692cf9ed14fa94f1ee1c198971
+      internalID: 1490551358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_2
+      name: zeld2_2
       rect:
         serializedVersion: 2
         x: 320
@@ -169,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67f7283498f1c2741addd360091e9e95
-      internalID: -1728638542
+      spriteID: 29ada9f905521c24e8b7c1bcdfdcabdd
+      internalID: 805512369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_3
+      name: zeld2_3
       rect:
         serializedVersion: 2
         x: 480
@@ -191,14 +191,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd4f4bfb8ffd5d2448a71ad795c40e24
-      internalID: -130895079
+      spriteID: e3682cf3c031f6248a7f1a1b5cd1caa2
+      internalID: -16743737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_11
+      name: zeld2_11
       rect:
         serializedVersion: 2
         x: 0
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00db03dd6553b574d81c8bb88ea91ba6
-      internalID: 648732127
+      spriteID: 2c463fbf9beb77a40970128fa50ee2da
+      internalID: -1587291151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_12
+      name: zeld2_12
       rect:
         serializedVersion: 2
         x: 160
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e687090460c9dcb42abc262073199568
-      internalID: -277439363
+      spriteID: 5ef4e1126287ba44f8c43af79ae62bfe
+      internalID: -343850771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_13
+      name: zeld2_13
       rect:
         serializedVersion: 2
         x: 320
@@ -257,14 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4faf75ce492357d45862a3561c5919d5
-      internalID: -502673040
+      spriteID: bc9821df30db7ca4aa44a90b379a91f0
+      internalID: -941236723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_14
+      name: zeld2_14
       rect:
         serializedVersion: 2
         x: 480
@@ -279,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5aa9052cdb5d60b49bda1877de9fe91f
-      internalID: 1439742588
+      spriteID: 1409dcb9601ddad44bce8319e3eedca0
+      internalID: -1620449407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_15
+      name: zeld2_15
       rect:
         serializedVersion: 2
         x: 640
@@ -301,14 +301,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d51564eaa2f3cc04596ca22dd1bfaff6
-      internalID: -145731481
+      spriteID: 57da0f96be630524ebff9b4b648ccfb1
+      internalID: 2132227130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_16
+      name: zeld2_16
       rect:
         serializedVersion: 2
         x: 800
@@ -323,14 +323,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b26c4014b4cdd5458e30165950d302b
-      internalID: -1165665881
+      spriteID: e2ae96ff589625044bf024a62caba59d
+      internalID: -986379803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_28
+      name: zeld2_28
       rect:
         serializedVersion: 2
         x: 0
@@ -345,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b7bcd8330d1bf4286e0b57cc935d61
-      internalID: 694423668
+      spriteID: bc502a5ee18091841a368a9897f99b64
+      internalID: 755082485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_29
+      name: zeld2_29
       rect:
         serializedVersion: 2
         x: 160
@@ -367,14 +367,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b18ab0a87842a147a951139abc5a610
-      internalID: -1223266247
+      spriteID: dea5e9fee4ed1864982818c43eb934bc
+      internalID: -662583543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_30
+      name: zeld2_30
       rect:
         serializedVersion: 2
         x: 480
@@ -389,14 +389,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 655c0303868da4b4ea8ca241b1520593
-      internalID: -2119200565
+      spriteID: dccb76cdd1ae0d34e8fc9bdf616c2181
+      internalID: -1318263052
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_31
+      name: zeld2_31
       rect:
         serializedVersion: 2
         x: 640
@@ -411,14 +411,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e95aa19b1d19c4f8bcbb25e66bb53e
-      internalID: -1570216343
+      spriteID: 9ad762ada948a7c4097707fc84f407c2
+      internalID: 846938367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_32
+      name: zeld2_32
       rect:
         serializedVersion: 2
         x: 800
@@ -433,14 +433,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 017111b2eb043e349a7b9ae2310fc904
-      internalID: -817791072
+      spriteID: c81f01835598d914dbadba9a46b3ca90
+      internalID: -1962237044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_44
+      name: zeld2_44
       rect:
         serializedVersion: 2
         x: 0
@@ -455,14 +455,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6a566278233c7e4e81a69a878426920
-      internalID: -185271461
+      spriteID: e4504cf8d35e41947ba57c9654bc7c97
+      internalID: -1541075619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_45
+      name: zeld2_45
       rect:
         serializedVersion: 2
         x: 160
@@ -477,14 +477,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bd26a049a395904d9406ecf55139f62
-      internalID: 717405422
+      spriteID: c433817c3b301634da6a004c8b244fe0
+      internalID: -1935617138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_46
+      name: zeld2_46
       rect:
         serializedVersion: 2
         x: 320
@@ -499,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 420b321c4ddf03f4ab33b9eddbd5b12b
-      internalID: -690351921
+      spriteID: 8e7106c2b92f0f74eadad35e1df212d1
+      internalID: -2003460076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_47
+      name: zeld2_47
       rect:
         serializedVersion: 2
         x: 480
@@ -521,36 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5df3804780705674baf39b6aa63f328c
-      internalID: -1561835588
+      spriteID: 17f3743e4405ad642b022eb2df7b4d92
+      internalID: 790590294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_48
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1400
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c654622a97317448928651760203b1b
-      internalID: -526117091
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zeld2 (2)_49
+      name: zeld2_49
       rect:
         serializedVersion: 2
         x: 160
@@ -565,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f42ef64030156ec42809fffd888c562c
-      internalID: -441678190
+      spriteID: c980631f5fde5954d91ecca19da76f6a
+      internalID: 1720765857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_50
+      name: zeld2_50
       rect:
         serializedVersion: 2
         x: 320
@@ -587,14 +565,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3cb4a32b0a11c34ca7f8d1855453330
-      internalID: -773122828
+      spriteID: 239bd45e69f16a54896e68e8e25af4b7
+      internalID: -44449462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_51
+      name: zeld2_51
       rect:
         serializedVersion: 2
         x: 480
@@ -609,14 +587,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3203999b54aa39f47b26639a6216b855
-      internalID: -809892753
+      spriteID: 81cfb0085ede8f34b834fe7e78260b5b
+      internalID: -899008499
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_53
+      name: zeld2_53
       rect:
         serializedVersion: 2
         x: 0
@@ -631,19 +609,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55cfe08fa255de46ad882e81ce6a318
-      internalID: 261938713
+      spriteID: a8347f3ab94190a4e9f057a0b8906ccf
+      internalID: 2033677588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_55
+      name: zeld2_55
       rect:
         serializedVersion: 2
         x: 320
         y: 1240
-        width: 320
+        width: 160
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -653,14 +631,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f44ae713079dfb545a52567082e0b7cc
-      internalID: 902688994
+      spriteID: f56df023fccc38a4d92c64fd15a5ee1a
+      internalID: -1610314388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_57
+      name: zeld2_56
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1240
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f1e1a7342102846917e9e0823304e8
+      internalID: 1548474384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zeld2_57
       rect:
         serializedVersion: 2
         x: 640
@@ -675,14 +675,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a368f6c41f3cff648af3fd0099d9dea9
-      internalID: 810586074
+      spriteID: 46b08daa12e2eed40a99e8f04dd4e4f7
+      internalID: -477413879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_58
+      name: zeld2_58
       rect:
         serializedVersion: 2
         x: 800
@@ -697,14 +697,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28521884876514c49a9c211dcee96b61
-      internalID: -567979813
+      spriteID: eb972ce8fe162bb4da1a6c956e1d8e23
+      internalID: -594664354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_59
+      name: zeld2_59
       rect:
         serializedVersion: 2
         x: 960
@@ -719,14 +719,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7876cddf3d3a1942aac90a0ebfe02da
-      internalID: 1836887887
+      spriteID: db4c9fb5aa7e98b44abfe6625fe0670f
+      internalID: 492913122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_60
+      name: zeld2_60
       rect:
         serializedVersion: 2
         x: 1120
@@ -741,14 +741,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b758be8ae7b9f418dd3b23f428ee34
-      internalID: 216861838
+      spriteID: 9c5fb0e9af085dc4aa86aa8be688d97b
+      internalID: 878258683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_62
+      name: zeld2_62
       rect:
         serializedVersion: 2
         x: 160
@@ -763,14 +763,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 326738bf23482f3478356fe2c9dc3cd0
-      internalID: 1790850786
+      spriteID: 93ede162bcf02c54aa83c024c517437c
+      internalID: -752411888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_63
+      name: zeld2_63
       rect:
         serializedVersion: 2
         x: 320
@@ -785,14 +785,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4697fb3c55fcd314fa7ba561149497d4
-      internalID: -1510953285
+      spriteID: 1521972db1da6154a98b5cf3f7be0c33
+      internalID: -2128184261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_64
+      name: zeld2_64
       rect:
         serializedVersion: 2
         x: 480
@@ -807,14 +807,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07ac1fbe935e9ba4f88ec2ec8cbae3cc
-      internalID: 1818591866
+      spriteID: 2e6379227cbd3da48a0baf948af4acd5
+      internalID: 889621973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_67
+      name: zeld2_67
       rect:
         serializedVersion: 2
         x: 0
@@ -829,14 +829,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca0223a08f1952f47a5ce4e9f77fdaeb
-      internalID: -151984312
+      spriteID: 7cde3dafdb6b0fd4b9c6a108c1202726
+      internalID: -476441491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_68
+      name: zeld2_68
       rect:
         serializedVersion: 2
         x: 160
@@ -851,14 +851,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b470692854bdaac4db0695c0208ab7f0
-      internalID: -642674511
+      spriteID: 9fd13db56b7d67f468f062ebe3a1b0a4
+      internalID: 1647895811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_69
+      name: zeld2_69
       rect:
         serializedVersion: 2
         x: 320
@@ -873,14 +873,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0c9dc78f312b914782a51cacef15030
-      internalID: -1449432663
+      spriteID: 9b047adbf21b93b46b3fa451f83b0afd
+      internalID: 538570475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_70
+      name: zeld2_70
       rect:
         serializedVersion: 2
         x: 480
@@ -895,14 +895,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67537e546103e94f97b383ea4298f2a
-      internalID: 414954523
+      spriteID: a2ea494f61b12064db4d5f67e110c67d
+      internalID: -991035429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_75
+      name: zeld2_75
       rect:
         serializedVersion: 2
         x: 0
@@ -917,14 +917,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c26012496cc6224cb95fa72c5e90277
-      internalID: -1135633630
+      spriteID: 014c0d15f82e567438b2702357f70568
+      internalID: 2093720549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_76
+      name: zeld2_76
       rect:
         serializedVersion: 2
         x: 160
@@ -939,14 +939,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d90a7ea3b29ceef4a9f0a42de758b3a9
-      internalID: -1787325554
+      spriteID: 05ab12b9e6e827b4fabc9cac130e3dd1
+      internalID: 92053380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_77
+      name: zeld2_77
       rect:
         serializedVersion: 2
         x: 320
@@ -961,14 +961,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2c17d17adf12d14f99c659751c14b1d
-      internalID: 1368419122
+      spriteID: 8b06a3f4cdfad93459e271ae0a5f571a
+      internalID: -1993810291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_80
+      name: zeld2_80
       rect:
         serializedVersion: 2
         x: 0
@@ -983,14 +983,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f6951d2bed79a94a86c6d682aab6e8e
-      internalID: -1710197989
+      spriteID: af607d95ad557824e84b163b933f8888
+      internalID: 2144654135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zeld2 (2)_81
+      name: zeld2_81
       rect:
         serializedVersion: 2
         x: 160
@@ -1005,8 +1005,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4c7cd7e2edb264185470070462f501
-      internalID: 1861516357
+      spriteID: f5da295d1b1215a4eb4635d231c322c1
+      internalID: -518956313
       vertices: []
       indices: 
       edges: []
@@ -1015,7 +1015,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c55faa128e7f6df43aad5edcb76a59f7
+    spriteID: 264a10bf2e42d3647b06afc780070bc2
     internalID: 0
     vertices: []
     indices: 
@@ -1027,91 +1027,91 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":160.0,"y":160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      zeld2 (2)_0: -55380062
-      zeld2 (2)_1: -1975686088
-      zeld2 (2)_10: -1347177475
-      zeld2 (2)_11: 648732127
-      zeld2 (2)_12: -277439363
-      zeld2 (2)_13: -502673040
-      zeld2 (2)_14: 1439742588
-      zeld2 (2)_15: -145731481
-      zeld2 (2)_16: -1165665881
-      zeld2 (2)_17: 1850536429
-      zeld2 (2)_18: -32195339
-      zeld2 (2)_19: 1783286117
-      zeld2 (2)_2: -1728638542
-      zeld2 (2)_20: 1409528329
-      zeld2 (2)_21: -531522353
-      zeld2 (2)_22: -616609797
-      zeld2 (2)_23: 247496760
-      zeld2 (2)_24: 79065851
-      zeld2 (2)_25: -1914062006
-      zeld2 (2)_26: -570650086
-      zeld2 (2)_27: 1408230883
-      zeld2 (2)_28: 694423668
-      zeld2 (2)_29: -1223266247
-      zeld2 (2)_3: -130895079
-      zeld2 (2)_30: -2119200565
-      zeld2 (2)_31: -1570216343
-      zeld2 (2)_32: -817791072
-      zeld2 (2)_33: -226733851
-      zeld2 (2)_34: 799719506
-      zeld2 (2)_35: -1130521727
-      zeld2 (2)_36: -1823216121
-      zeld2 (2)_37: -103881904
-      zeld2 (2)_38: 425126142
-      zeld2 (2)_39: 1133600393
-      zeld2 (2)_4: 1623952236
-      zeld2 (2)_40: -1753330712
-      zeld2 (2)_41: 348715540
-      zeld2 (2)_42: -853577493
-      zeld2 (2)_43: 1417036079
-      zeld2 (2)_44: -185271461
-      zeld2 (2)_45: 717405422
-      zeld2 (2)_46: -690351921
-      zeld2 (2)_47: -1561835588
-      zeld2 (2)_48: -526117091
-      zeld2 (2)_49: -441678190
-      zeld2 (2)_5: 367983404
-      zeld2 (2)_50: -773122828
-      zeld2 (2)_51: -809892753
-      zeld2 (2)_52: 2022620465
-      zeld2 (2)_53: 261938713
-      zeld2 (2)_54: -1621018968
-      zeld2 (2)_55: 902688994
-      zeld2 (2)_56: 716681567
-      zeld2 (2)_57: 810586074
-      zeld2 (2)_58: -567979813
-      zeld2 (2)_59: 1836887887
-      zeld2 (2)_6: 678008029
-      zeld2 (2)_60: 216861838
-      zeld2 (2)_61: -253969730
-      zeld2 (2)_62: 1790850786
-      zeld2 (2)_63: -1510953285
-      zeld2 (2)_64: 1818591866
-      zeld2 (2)_65: -2024680594
-      zeld2 (2)_66: -1465246986
-      zeld2 (2)_67: -151984312
-      zeld2 (2)_68: -642674511
-      zeld2 (2)_69: -1449432663
-      zeld2 (2)_7: -471129382
-      zeld2 (2)_70: 414954523
-      zeld2 (2)_71: -271714361
-      zeld2 (2)_72: -1947032352
-      zeld2 (2)_73: 1880586299
-      zeld2 (2)_74: -1504669347
-      zeld2 (2)_75: -1135633630
-      zeld2 (2)_76: -1787325554
-      zeld2 (2)_77: 1368419122
-      zeld2 (2)_78: -674811372
-      zeld2 (2)_79: 1943014378
-      zeld2 (2)_8: -555484031
-      zeld2 (2)_80: -1710197989
-      zeld2 (2)_81: 1861516357
-      zeld2 (2)_82: 114911779
-      zeld2 (2)_83: 1661659192
-      zeld2 (2)_84: -2015464495
-      zeld2 (2)_9: 1698346201
+      zeld2_0: 1778367542
+      zeld2_1: 1490551358
+      zeld2_10: 1385115756
+      zeld2_11: -1587291151
+      zeld2_12: -343850771
+      zeld2_13: -941236723
+      zeld2_14: -1620449407
+      zeld2_15: 2132227130
+      zeld2_16: -986379803
+      zeld2_17: 136431884
+      zeld2_18: -173360266
+      zeld2_19: 1395999230
+      zeld2_2: 805512369
+      zeld2_20: 604166246
+      zeld2_21: -777672297
+      zeld2_22: -603624575
+      zeld2_23: -195113310
+      zeld2_24: -14105846
+      zeld2_25: -2098206829
+      zeld2_26: -1772721802
+      zeld2_27: 1500783096
+      zeld2_28: 755082485
+      zeld2_29: -662583543
+      zeld2_3: -16743737
+      zeld2_30: -1318263052
+      zeld2_31: 846938367
+      zeld2_32: -1962237044
+      zeld2_33: -1216295975
+      zeld2_34: -677544906
+      zeld2_35: 226324821
+      zeld2_36: -379245089
+      zeld2_37: 1545585272
+      zeld2_38: 7358798
+      zeld2_39: 1800100620
+      zeld2_4: -1692785584
+      zeld2_40: 2043445521
+      zeld2_41: 581042952
+      zeld2_42: -1144293453
+      zeld2_43: 694069973
+      zeld2_44: -1541075619
+      zeld2_45: -1935617138
+      zeld2_46: -2003460076
+      zeld2_47: 790590294
+      zeld2_48: 181406619
+      zeld2_49: 1720765857
+      zeld2_5: -334500895
+      zeld2_50: -44449462
+      zeld2_51: -899008499
+      zeld2_52: -1091050872
+      zeld2_53: 2033677588
+      zeld2_54: -297231993
+      zeld2_55: -1610314388
+      zeld2_56: 1548474384
+      zeld2_57: -477413879
+      zeld2_58: -594664354
+      zeld2_59: 492913122
+      zeld2_6: 2145734595
+      zeld2_60: 878258683
+      zeld2_61: 2105682735
+      zeld2_62: -752411888
+      zeld2_63: -2128184261
+      zeld2_64: 889621973
+      zeld2_65: -742091003
+      zeld2_66: -1281992830
+      zeld2_67: -476441491
+      zeld2_68: 1647895811
+      zeld2_69: 538570475
+      zeld2_7: -576155483
+      zeld2_70: -991035429
+      zeld2_71: -27307321
+      zeld2_72: 2120322549
+      zeld2_73: -1756608002
+      zeld2_74: 2052930117
+      zeld2_75: 2093720549
+      zeld2_76: 92053380
+      zeld2_77: -1993810291
+      zeld2_78: -245907367
+      zeld2_79: 1643594427
+      zeld2_8: -773719229
+      zeld2_80: 2144654135
+      zeld2_81: -518956313
+      zeld2_82: -2117574387
+      zeld2_83: 75040371
+      zeld2_84: 399337626
+      zeld2_9: 380378862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
