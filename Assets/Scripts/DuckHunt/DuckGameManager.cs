@@ -6,8 +6,11 @@ public class DuckGameManager : MonoBehaviour
 {
     public static DuckGameManager Instance;
     [SerializeField] private DuckSpawner duckSpawner;
+    [SerializeField] private Dog dog;
 
     private float score = 0f;
+    private int duckMissed = 0;
+    private int duckShot = 0;
     [SerializeField] private int maxBulletCount = 6;
     public int MaxBulletCount { get => maxBulletCount; }
     [SerializeField] private int maxReloads = 1;
@@ -20,6 +23,7 @@ public class DuckGameManager : MonoBehaviour
     [HideInInspector] public UnityEvent<float> OnScoreChange = new();
     [HideInInspector] public UnityEvent<int> OnShotFired = new();
     [HideInInspector] public UnityEvent<int> OnReload = new();
+    [HideInInspector] public UnityEvent<int> OnDuckCountChanged = new();
     [HideInInspector] public UnityEvent OnAmmoDepleted = new();
 
 
@@ -30,6 +34,7 @@ public class DuckGameManager : MonoBehaviour
             Destroy(Instance.gameObject);
         }
         Instance = this;
+        DontDestroyOnLoad(Instance);
         if (duckSpawner == null)
             duckSpawner = FindFirstObjectByType<DuckSpawner>();
     }
@@ -37,6 +42,8 @@ public class DuckGameManager : MonoBehaviour
     void Start()
     {
         reloads = maxReloads + 1;
+        duckMissed = duckSpawner.MaxDucks;
+        duckShot = 0;
         Debug.Log($"<color=yellow>{name}:</color> Initial reloading...");
         Reload();
         duckSpawner.StartRound();
@@ -47,7 +54,10 @@ public class DuckGameManager : MonoBehaviour
         if (deltaScore < 0)
             return;
         score += deltaScore;
+        duckShot++;
+        duckMissed--;
         OnScoreChange.Invoke(score);
+        OnDuckCountChanged.Invoke(duckShot);
     }
 
     public void Shoot()
@@ -77,5 +87,21 @@ public class DuckGameManager : MonoBehaviour
         Debug.Log($"<color=yellow>{name}:</color> Ammo depleted... Stopping");
         hasAmmo = false;
         OnAmmoDepleted.Invoke();
+    }
+
+    public DuckGameResults GetResults()
+    {
+        DuckGameResults results = new()
+        {
+            DogShot = dog.Status == DuckStatus.Damaged,
+            DuckMissed = duckMissed,
+            DuckShot = duckShot,
+            Score = score
+        };
+        return results;
+    }
+    public int GetDuckCount()
+    {
+        return duckSpawner.MaxDucks;
     }
 }
