@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5493835077095157373}
   - component: {fileID: 6084585524989319285}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: HurtSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3908927117964377782}
   - component: {fileID: 5797989529712725917}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: FallSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 727937095023924564}
   - component: {fileID: 1927996966723893595}
   - component: {fileID: 2719237402566074417}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Duck
   m_TagString: Duck
   m_Icon: {fileID: 0}
@@ -376,6 +376,13 @@ MonoBehaviour:
   difficultyCompensation: 1.2
   hurtSFX: {fileID: 6084585524989319285}
   fallSFX: {fileID: 0}
+  index: 0
+  OnSurvived:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &6079296483134814716
 Animator:
   serializedVersion: 7
@@ -512,7 +519,7 @@ GameObject:
   - component: {fileID: 14096614705961704}
   - component: {fileID: 5659330803683196446}
   - component: {fileID: 4283684004462116027}
-  m_Layer: 7
+  m_Layer: 11
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
